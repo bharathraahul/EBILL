@@ -1,0 +1,26 @@
+<h2 class="text-center">The List of Customers</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <!-- <th>Customer Id</th> -->
+            <th>User Id</th>
+            <th>Meter Id</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.name}}</td>
+            <!-- <td>{{customer.cust_id}}</td> -->
+            <td>{{customer.user_id}}</td>
+            <td>{{customer.meter_id}}</td>
+            <td>{{customer.phone}}</td>
+            <td>{{customer.email}}</td>
+            
+        </tr>
+    </tbody>
+
+</table>
