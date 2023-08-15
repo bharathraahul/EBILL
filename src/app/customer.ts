@@ -1,7 +1,7 @@
 export class Customer {
+    name:string;
     cust_id: number;
     user_id:number;
-    name:string;
     address:string;
     phone:number;
     meter_id:number;

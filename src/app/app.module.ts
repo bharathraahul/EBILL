@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { CreateCustomerComponent } from './create-customer/create-customer.component';
 import { FormsModule } from '@angular/forms';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     HomepageComponent,
     RegisterComponent,
     CreateCustomerComponent,
+    CustomerDetailsComponent,
     
     
 

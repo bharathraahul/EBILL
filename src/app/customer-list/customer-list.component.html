@@ -3,22 +3,27 @@
     <thead>
         <tr>
             <th>Name</th>
-            <!-- <th>Customer Id</th> -->
+            <th>Customer Id</th>
             <th>User Id</th>
             <th>Meter Id</th>
             <th>Phone Number</th>
             <th>Email</th>
+            <th>Actions</th>
         </tr>
     </thead>
 
     <tbody>
         <tr *ngFor="let customer of customers">
             <td>{{customer.name}}</td>
-            <!-- <td>{{customer.cust_id}}</td> -->
+            <td>{{customer.cust_id}}</td>
             <td>{{customer.user_id}}</td>
             <td>{{customer.meter_id}}</td>
             <td>{{customer.phone}}</td>
             <td>{{customer.email}}</td>
+            <td>
+                <button (click) = "deleteCustomer(customer.cust_id)" class="btn btn-danger">Delete</button>
+                <button (click) = "customerDetails(customer.cust_id)" class="btn btn-info" style="margin-left: 15px;">View</button>
+            </td>
             
         </tr>
     </tbody>

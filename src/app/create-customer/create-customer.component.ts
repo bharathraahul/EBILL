@@ -16,7 +16,7 @@ export class CreateCustomerComponent {
 
 
   saveCustomer(){
-    this.customerService.saveCustomer(this.customer).subscribe(data =>{
+    this.customerService.createCustomer(this.customer).subscribe(data =>{
       console.log(data);
       this.goToCustomerList();
     },

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Customer } from '../customer';
 import { CustomerService } from '../customer.service';
 
@@ -11,7 +12,8 @@ export class CustomerListComponent {
 
   customers:Customer[];
   
-  constructor(private customerService: CustomerService){}
+  constructor(private customerService: CustomerService,
+    private router: Router){}
 
   ngOnInit(): void{
 
@@ -22,7 +24,25 @@ export class CustomerListComponent {
   private getCustomers(){
     this.customerService.getCustomersList().subscribe(data =>{
       this.customers = data;
+      console.log(this.customers);
     })
+
+
+  }
+
+  deleteCustomer(cust_id:number){
+    this.customerService.deleteCustomer(cust_id).subscribe(data => {
+      console.log(data);
+      this.getCustomers();
+    })
+
+
+  }
+
+
+  customerDetails(cust_id:number){
+    this.router.navigate(['customer-details',cust_id]);
+
   }
   //   this.customers=[
   //     {
